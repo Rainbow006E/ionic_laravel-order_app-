@@ -1,0 +1,8 @@
+<div>
+  <h2>{{ product.name }}</h2>
+  <p class="product-descr" *ngIf="descr">{{ product.description }}</p>
+  <div class="product-price">
+    <span *ngIf="product.price_old && (product.price_old > product.price)"><s>{{ product.price_old}}</s></span>
+    <span>{{ product.price }} AED</span>
+  </div>
+</div>

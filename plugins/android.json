@@ -1,0 +1,53 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-stripe": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "com.paypal.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "cordova-custom-config": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    },
+    "card.io.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.devfanatic.ecommerce"
+    }
+  }
+}
