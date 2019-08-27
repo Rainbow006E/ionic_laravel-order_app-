@@ -40,14 +40,14 @@
     <form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">
 
     <ion-item *ngIf="multipleCities">
-      <ion-select placeholder="{{ 'newOrder.city' | translate }}" [formControl]="loginForm.controls.city_id">
+      <ion-select placeholder="{{ 'newOrder.city' | translate }}" [formControl]="loginForm.controls.city_id" (ionChange)="onCityChange($event)">
         <ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>
       </ion-select>
     </ion-item>
     
     <ion-item *ngIf="multipleCities">
         <ion-select placeholder="{{ 'newOrder.area' | translate }}" [formControl]="loginForm.controls.city_id">
-          <ion-option  *ngFor="let areas of this.areasList" value="{{ areas.name }}">{{ areas.name }}</ion-option>
+          <ion-option  *ngFor="let areas of this.areas_city" value="{{ areas.name }}">{{ areas.name }}</ion-option>
         </ion-select>
       </ion-item>
   

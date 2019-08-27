@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 702:
+/***/ 704:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoyaltyPageModule", function() { return LoyaltyPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__loyalty__ = __webpack_require__(857);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__loyalty__ = __webpack_require__(859);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_ecurrency_module__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_svg_round_progressbar__ = __webpack_require__(858);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_svg_round_progressbar__ = __webpack_require__(860);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_svg_round_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular_svg_round_progressbar__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -484,7 +484,7 @@ exports.RoundProgressEase = RoundProgressEase;
 
 /***/ }),
 
-/***/ 840:
+/***/ 842:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -689,7 +689,7 @@ exports.RoundProgressComponent = RoundProgressComponent;
 
 /***/ }),
 
-/***/ 857:
+/***/ 859:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -727,16 +727,17 @@ var LoyaltyPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'loyalty',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\loyalty\loyalty.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Loyalty program</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list class="loyalty-header">\n    <ion-item text-wrap>\n      <h1 class="text-center">{{ \'loyalty.heading\' | translate }}</h1>\n    </ion-item>\n  </ion-list>\n  <div class="loyalty-progress-holder">\n    <div class="text">\n      <div class="available" *ngIf="userData.loyalty_reward > 0">\n        {{ userData.loyalty_reward | ecurrency }} <small>available</small>\n      </div>\n      <span class="points">{{ userData.loyalty_points }}/{{ settings.loyalty_points_for_reward }}</span>\n      <div class="comment">Before the next reward</div>\n    </div>\n    <round-progress\n      [current]="userData.loyalty_points"\n      [max]="settings.loyalty_points_for_reward"\n      [color]="\'#ff3f00\'"\n      [background]="\'#b4b4b4\'"\n      [stroke]="40"\n      [rounded]="true"\n      [clockwise]="true"\n      [responsive]="true"\n      [duration]="800"\n      [animation]="\'easeInOutQuart\'"\n      [animationDelay]="0"></round-progress>\n  </div>\n  <ion-card>\n    <ion-card-content class="loyalty-text">\n      <div [innerHTML]="\'loyalty.description\' | translate:{loyalty_points_per_amount: settings.loyalty_points_per_amount | ecurrency, loyalty_points_per_order: settings.loyalty_points_per_order, loyalty_points_for_reward: settings.loyalty_points_for_reward, loyalty_reward_amount: settings.loyalty_reward_amount | ecurrency}"></div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\loyalty\loyalty.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]) === "function" && _a || Object])
     ], LoyaltyPage);
     return LoyaltyPage;
+    var _a;
 }());
 
 //# sourceMappingURL=loyalty.js.map
 
 /***/ }),
 
-/***/ 858:
+/***/ 860:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -747,7 +748,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(48);
-var round_progress_component_1 = __webpack_require__(840);
+var round_progress_component_1 = __webpack_require__(842);
 var round_progress_service_1 = __webpack_require__(837);
 var round_progress_ease_1 = __webpack_require__(839);
 var round_progress_config_1 = __webpack_require__(838);
@@ -766,7 +767,7 @@ var RoundProgressModule = /** @class */ (function () {
 }());
 exports.RoundProgressModule = RoundProgressModule;
 ;
-__export(__webpack_require__(840));
+__export(__webpack_require__(842));
 __export(__webpack_require__(837));
 __export(__webpack_require__(839));
 __export(__webpack_require__(838));

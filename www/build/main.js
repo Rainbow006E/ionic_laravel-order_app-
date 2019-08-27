@@ -56,11 +56,10 @@ var UtilService = (function () {
     };
     UtilService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]) === "function" && _c || Object])
     ], UtilService);
     return UtilService;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=util_service.js.map
@@ -131,31 +130,31 @@ webpackEmptyAsyncContext.id = 171;
 
 var map = {
 	"../pages/catalog/categories/categories.module": [
-		695,
+		691,
 		21
 	],
 	"../pages/catalog/products/products.module": [
-		692,
+		690,
 		7
 	],
 	"../pages/catalog/restaurants/restaurants.module": [
-		694,
+		692,
 		20
 	],
 	"../pages/home/home.module": [
-		690,
+		693,
 		19
 	],
 	"../pages/manage-address/manage-address.module": [
-		691,
+		694,
 		18
 	],
 	"../pages/new-order/new-order.module": [
-		696,
+		695,
 		17
 	],
 	"../pages/news/news_detail/news_detail.module": [
-		697,
+		696,
 		3
 	],
 	"../pages/news/news_feed/news_feed.module": [
@@ -163,7 +162,7 @@ var map = {
 		2
 	],
 	"../pages/order-success/order-success.module": [
-		693,
+		697,
 		16
 	],
 	"../pages/ordering/address_map/address_map.module": [
@@ -175,11 +174,11 @@ var map = {
 		15
 	],
 	"../pages/ordering/credit_card_input/credit_card_input.module": [
-		701,
+		702,
 		14
 	],
 	"../pages/ordering/order/order.module": [
-		704,
+		701,
 		5
 	],
 	"../pages/personal/login/login.module": [
@@ -187,35 +186,35 @@ var map = {
 		13
 	],
 	"../pages/personal/loyalty/loyalty.module": [
-		702,
+		704,
 		4
 	],
 	"../pages/personal/order_view/order_view.module": [
-		707,
+		705,
 		1
 	],
 	"../pages/personal/orders_history/orders_history.module": [
-		709,
+		706,
 		0
 	],
 	"../pages/personal/profile/profile.module": [
-		708,
+		707,
 		12
 	],
 	"../pages/personal/signup/signup.module": [
-		711,
+		709,
 		11
 	],
 	"../pages/source/source.module": [
-		705,
+		708,
 		10
 	],
 	"../pages/store-locator/store-locator.module": [
-		706,
+		710,
 		9
 	],
 	"../pages/track/track.module": [
-		710,
+		711,
 		8
 	]
 };
@@ -293,12 +292,10 @@ var Welcome = (function () {
     Welcome = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\welcome\welcome.html"*/'<div class="welcome-screen">\n    <div class="welcome-group">\n        <p class="text-center">\n            <!--<span class="welcome-icon">-->\n            <!--<span class="inner"></span>-->\n            <!--</span>-->\n            <span class="welcome-text">\n                {{ \'welcome.welcome\' | translate }}<br/>{{ \'welcome.app_name\' | translate }}\n            </span>\n        </p>\n    </div>\n    <div class="welcome-content" *ngIf="!signup">\n        <button ion-button block large class="start-button" (click)="startApp()">{{ \'welcome.start\' | translate }}</button>\n    </div>\n    <div class="welcome-content" *ngIf="signup">\n        <button ion-button block large class="start-button" (click)="goToSignup()">{{ \'welcome.signup\' | translate }}</button>\n        <div class="text-center">\n            <a style="color:white;" (click)="goToLogin()">{{ \'welcome.login\' | translate }}</a>\n        </div>\n    </div>\n</div>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\welcome\welcome.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_4__services_push_service__["a" /* PushService */],
-            __WEBPACK_IMPORTED_MODULE_5__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_push_service__["a" /* PushService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_push_service__["a" /* PushService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_api_service__["a" /* APIService */]) === "function" && _d || Object])
     ], Welcome);
     return Welcome;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=welcome.js.map
@@ -446,10 +443,10 @@ var OrderHistoryService = (function () {
     };
     OrderHistoryService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_2__api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__api_service__["a" /* APIService */]) === "function" && _b || Object])
     ], OrderHistoryService);
     return OrderHistoryService;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=order_history_service.js.map
@@ -550,10 +547,10 @@ var MyErrorHandler = (function () {
     };
     MyErrorHandler = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _b || Object])
     ], MyErrorHandler);
     return MyErrorHandler;
+    var _a, _b;
 }());
 
 function createTranslateLoader(http) {
@@ -576,28 +573,28 @@ var AppModule = (function () {
                     autoFocusAssist: false
                 }, {
                     links: [
+                        { loadChildren: '../pages/catalog/products/products.module#ProductsPageModule', name: 'ProductsPage', segment: 'products', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/catalog/categories/categories.module#CategoriesPageModule', name: 'CategoriesPage', segment: 'categories', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/catalog/restaurants/restaurants.module#RestaurantsPageModule', name: 'RestaurantsPage', segment: 'restaurants', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/manage-address/manage-address.module#ManageAddressPageModule', name: 'ManageAddressPage', segment: 'manage-address', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/catalog/products/products.module#ProductsPageModule', name: 'ProductsPage', segment: 'products', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/order-success/order-success.module#OrderSuccessPageModule', name: 'OrderSuccessPage', segment: 'order-success', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/catalog/restaurants/restaurants.module#RestaurantsPageModule', name: 'RestaurantsPage', segment: 'restaurants', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/catalog/categories/categories.module#CategoriesPageModule', name: 'CategoriesPage', segment: 'categories', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-order/new-order.module#NewOrderPageModule', name: 'NewOrderPage', segment: 'new-order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news_detail/news_detail.module#NewsDetailPageModule', name: 'NewsDetailPage', segment: 'news_detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/order-success/order-success.module#OrderSuccessPageModule', name: 'OrderSuccessPage', segment: 'order-success', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news_feed/news_feed.module#NewsFeedPageModule', name: 'NewsFeedPage', segment: 'news_feed', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ordering/address_map/address_map.module#AddressMapModule', name: 'AddressMap', segment: 'address_map', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ordering/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/ordering/credit_card_input/credit_card_input.module#CreditCardInputModule', name: 'CreditCardInput', segment: 'credit_card_input', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal/loyalty/loyalty.module#LoyaltyPageModule', name: 'LoyaltyPage', segment: 'loyalty', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ordering/order/order.module#OrderPageModule', name: 'OrderPage', segment: 'order', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/source/source.module#SourcePageModule', name: 'SourcePage', segment: 'source', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/store-locator/store-locator.module#StoreLocatorPageModule', name: 'StoreLocatorPage', segment: 'store-locator', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ordering/credit_card_input/credit_card_input.module#CreditCardInputModule', name: 'CreditCardInput', segment: 'credit_card_input', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personal/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personal/loyalty/loyalty.module#LoyaltyPageModule', name: 'LoyaltyPage', segment: 'loyalty', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/personal/order_view/order_view.module#OrdersHistoryPageModule', name: 'OrderViewPage', segment: 'order_view', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/personal/orders_history/orders_history.module#OrdersHistoryPageModule', name: 'OrdersHistoryPage', segment: 'orders_history', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/track/track.module#TrackPageModule', name: 'TrackPage', segment: 'track', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personal/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/personal/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/source/source.module#SourcePageModule', name: 'SourcePage', segment: 'source', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personal/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/store-locator/store-locator.module#StoreLocatorPageModule', name: 'StoreLocatorPage', segment: 'store-locator', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/track/track.module#TrackPageModule', name: 'TrackPage', segment: 'track', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -997,12 +994,10 @@ var APIService = (function () {
     };
     APIService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _d || Object])
     ], APIService);
     return APIService;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=api_service.js.map
@@ -1042,9 +1037,10 @@ var ECurrencyPipe = (function () {
     };
     ECurrencyPipe = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'ecurrency' }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]) === "function" && _a || Object])
     ], ECurrencyPipe);
     return ECurrencyPipe;
+    var _a;
 }());
 
 //# sourceMappingURL=ecurrency.js.map
@@ -1283,7 +1279,7 @@ var CartService = (function () {
         var _this = this;
         if (this.items.length > 0 && this.apiService.getSettings().multiple_restaurants) {
             if (this.items[0].product.restaurant_id != product.restaurant_id) {
-                var confirm_1 = this.alertCtrl.create({
+                var confirm = this.alertCtrl.create({
                     title: this.translate.instant('cart.add_from_other_restaurant_title'),
                     message: this.translate.instant('cart.add_from_other_restaurant_text'),
                     buttons: [{
@@ -1296,7 +1292,7 @@ var CartService = (function () {
                             }
                         }]
                 });
-                confirm_1.present();
+                confirm.present();
             }
             else {
                 this.doAddItem(product, count);
@@ -1356,12 +1352,10 @@ var CartService = (function () {
     });
     CartService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_6__api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__api_service__["a" /* APIService */]) === "function" && _d || Object])
     ], CartService);
     return CartService;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=cart_service.js.map
@@ -1415,10 +1409,10 @@ var TabsPage = (function () {
     TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\tabs\tabs.html"*/'<ion-tabs>\n	<ion-tab class = "tabshome"[root]="tab0Root" tabTitle="{{ \'tabs.home\' | translate }} " tabIcon="home"></ion-tab>\n	<ion-tab [root]="tab1Root" tabTitle="{{ \'tabs.menu\' | translate }} " tabIcon="cafe"></ion-tab>\n	<ion-tab [root]="tab2Root" tabTitle="{{ \'tabs.cart\' | translate }}" tabIcon="cart" tabBadge="{{ count > 0 ? count : \'\' }}"></ion-tab>\n	<ion-tab [root]="tab3Root" tabTitle="{{ \'tabs.orders_list\' | translate }}" tabIcon="albums"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="{{ \'tabs.track\' | translate }}" tabIcon="ribbon"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\tabs\tabs.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */],
-            __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _b || Object])
     ], TabsPage);
     return TabsPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=tabs.js.map

@@ -25,69 +25,65 @@ import { TranslateService } from '@ngx-translate/core';
 export class NewOrderPage {
 
   public loginForm: FormGroup;
-	public active: boolean;
-	public multipleCities = false;
-  public cities:any[] = [];
-  public cat:any[];
-  public add: any=[];
-  public del:any;
-  areasList:any=[];
+  public active: boolean;
+  public multipleCities = false;
+  public cities: any[] = [];
+  public cat: any[];
+  public add: any = [];
+  public del: any;
+  areasList: any = [];
+  areas_city: any = [];
 
-  
+
 
   constructor(
-      public navCtrl: NavController,
-      public navParams: NavParams,
-      private apiService: APIService,
-      private nav: NavController,
-      private builder: FormBuilder,
-      private util: UtilService,
-      private push: PushService,
-      private storage: Storage,
-      private translate: TranslateService) {
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private apiService: APIService,
+    private nav: NavController,
+    private builder: FormBuilder,
+    private util: UtilService,
+    private push: PushService,
+    private storage: Storage,
+    private translate: TranslateService) {
 
-        
+
     this.getAreas();
     this.active = true;
-		const fields = {
-			
-		};
-		this.multipleCities = (this.apiService.getSettings().multiple_cities == 1);
-		if (this.multipleCities) {
-			fields['city_id'] = [null, Validators.required];
+    const fields = {
+    };
+
+    this.multipleCities = (this.apiService.getSettings().multiple_cities == 1);
+    if (this.multipleCities) {
+      fields['city_id'] = [null, Validators.required];
       this.cities = this.apiService.getCities();
-      console.log("cities" + this.cities);
-		}
+    }
     this.loginForm = this.builder.group(fields);
     this.cities = this.apiService.getCities();
 
     this.cat = this.apiService.getCategories();
-    console.log("categories" + this.cat);
-
-   
 
     this.del = this.apiService.getDeliveryAreas();
     console.log("delivery" + this.del);
 
-
-
+    this.areas_city[0] = {name:'Please select city.'};
   }
-    getAreas(){
-      this.apiService.getAreas().subscribe(data => {
-        this.areasList = data;
-        console.log('Areas : ', this.areasList[0].name);
-      }
-      );
-    }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewOrderPage');
+  getAreas() {
+    this.apiService.getAreas().subscribe(data => {
+      this.areasList = data;
+      console.log('areaList: ', this.areasList)
+    });
   }
 
-  openOrder(){
+  openOrder() {
     this.navCtrl.push('CategoriesPage');
+    console.log('openOrder!');
   }
 
-  
+  onCityChange(e) {
+    console.log('e: ', e)
+    this.areas_city = this.areasList.filter(x => x.city_id == e)
+    console.log('areas_city: ', this.areas_city)
+  }
 
 }

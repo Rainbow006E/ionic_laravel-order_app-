@@ -38,6 +38,7 @@ export class OrderPage {
   public add: any=[];
   public del:any;
   areasList:any=[];
+  areas_city: any = [];
 
   constructor(
     private cart: CartService,
@@ -95,6 +96,8 @@ export class OrderPage {
     });
     this.formReady = true;
     this.discountPrice = null;
+
+    this.areas_city[0] = {name:'Please select city.'};
   }
 
   getAreas(){
@@ -103,6 +106,12 @@ export class OrderPage {
       console.log('Areas : ', this.areasList[0].name);
     }
     );
+  }
+
+  onCityChange(e) {
+    console.log('e: ', e)
+    this.areas_city = this.areasList.filter(x => x.city_id == e)
+    console.log('areas_city: ', this.areas_city)
   }
 
   showAddressWindow() {

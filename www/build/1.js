@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 707:
+/***/ 705:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdersHistoryPageModule", function() { return OrdersHistoryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__order_view__ = __webpack_require__(863);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__order_view__ = __webpack_require__(861);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_ecurrency_module__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -16649,7 +16649,7 @@ webpackContext.id = 836;
 
 /***/ }),
 
-/***/ 863:
+/***/ 861:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16697,10 +16697,10 @@ var OrderViewPage = (function () {
     OrderViewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\order_view\order_view.html"*/'<ion-header>\n    <ion-navbar custom-navbar>\n        <ion-title>\n            {{ \'order.view\' | translate }}\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-card>\n        <ion-item>\n            <h2 [translate]="\'order.id\'" [translateParams]="{ id: order.id }"></h2>\n            <p *ngIf="order.order_status">{{ order.order_status.name }}</p>\n            <p>{{ order.name }}</p>\n            <p>{{ order.phone }}</p>\n            <p>{{ order.address }}</p>\n            <p>{{ stringAsDate(order.created_at) | date: date_format }}</p>\n        </ion-item>\n        <ion-item *ngIf="order.restaurant && multiR">\n            <p>{{ order.restaurant.name }}</p>\n        </ion-item>\n        <ion-item *ngFor="let item of order.ordered_products">\n            <p>{{ item.product.name }}</p>\n            <p>{{ item.product.price | ecurrency }} x {{ item.count }} = {{ item.product.price * item.count | ecurrency }}</p>\n        </ion-item>\n        <ion-item>\n            <p><b>{{ \'order.delivery_price\' | translate }}</b> {{ order.delivery_price | ecurrency }}</p>\n            <p><b>{{ \'order.total\' | translate }}</b> {{ order.total | ecurrency }}</p>\n            <p><b>{{ \'order.tax\' | translate }}</b> {{ order.tax | ecurrency }}</p>\n            <p><b>{{ \'order.total_with_tax\' | translate }}</b> {{ order.total_with_tax + order.delivery_price | ecurrency }}</p>\n        </ion-item>\n    </ion-card>\n</ion-content>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\order_view\order_view.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
     ], OrderViewPage);
     return OrderViewPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=order_view.js.map

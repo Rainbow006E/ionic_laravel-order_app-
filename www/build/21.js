@@ -1,6 +1,6 @@
 webpackJsonp([21],{
 
-/***/ 695:
+/***/ 691:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesPageModule", function() { return CategoriesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__categories__ = __webpack_require__(849);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__categories__ = __webpack_require__(845);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -40,7 +40,7 @@ var CategoriesPageModule = (function () {
 
 /***/ }),
 
-/***/ 849:
+/***/ 845:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104,11 +104,10 @@ var CategoriesPage = (function () {
     CategoriesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\catalog\categories\categories.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle *ngIf="loggedIn">\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>\n            <span *ngIf="rootCategory">{{ rootCategory.name }}</span>\n            <span *ngIf="!rootCategory">{{ \'catalog.title\' | translate }}</span>\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div *ngIf="layout == 0">\n    <div *ngFor="let category of categories; let i = index;" (click)="showDetails(category)" tappable class="category-item" [ngStyle]="{\'background-image\': \'url(\' + category.image_url + \')\'}">\n      <div class="title">{{ category.name }}</div>\n    </div>\n  </div>\n  <div *ngIf="layout == 1">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6 *ngFor="let category of categories; let i = index;">\n          <div (click)="showDetails(category)" tappable class="category-item" [ngStyle]="{\'background-image\': \'url(\' + category.image_url + \')\'}">\n            <div class="title">{{ category.name }}</div>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\catalog\categories\categories.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object])
     ], CategoriesPage);
     return CategoriesPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=categories.js.map

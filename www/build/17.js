@@ -1,6 +1,6 @@
 webpackJsonp([17],{
 
-/***/ 696:
+/***/ 695:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewOrderPageModule", function() { return NewOrderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_order__ = __webpack_require__(850);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_order__ = __webpack_require__(849);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var NewOrderPageModule = (function () {
 
 /***/ }),
 
-/***/ 850:
+/***/ 849:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -123,7 +123,7 @@ var NewOrderPage = (function () {
     };
     NewOrderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-new-order',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\new-order\new-order.html"*/'<!--\n  Generated template for the NewOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n\n     <p class="title">Select Location:</p>\n    	<form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">\n	\n			<ion-item *ngIf="multipleCities">\n				<ion-select placeholder="{{ \'newOrder.city\' | translate }}" [formControl]="loginForm.controls.city_id">\n					<ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n				</ion-select>\n      </ion-item>\n      \n      <ion-item *ngIf="multipleCities">\n          <ion-select placeholder="{{ \'newOrder.area\' | translate }}" [formControl]="loginForm.controls.city_id">\n            <ion-option  *ngFor="let areas of this.areasList" value="{{ areas.name }}">{{ areas.name }}</ion-option>\n          </ion-select>\n        </ion-item>\n        \n      <!--   <div class="wrapper1">\n            <p class="title2">Default Adress:</p> \n          </div>\n            <div class="wrapper2">\n            \n            <ion-input  placeholder="33, street 2 Mankool, Blur Dubai"></ion-input>\n            <ion-input  placeholder="Dubai, United Arab Emirates"></ion-input>\n            </div> -->\n			\n			<button ion-button type="submit" block color="primary" [disabled]="loginForm.invalid">\n				{{ \'newOrder.continue\' | translate }}\n			</button>\n		\n		</form>\n\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\new-order\new-order.html"*/,
+            selector: 'page-new-order',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\new-order\new-order.html"*/'<!--\n  Generated template for the NewOrderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n  <p class="title">Select Location:</p>\n  <form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">\n\n    <ion-item *ngIf="multipleCities">\n      <ion-select placeholder="{{ \'newOrder.city\' | translate }}" [formControl]="loginForm.controls.city_id" (ionChange)="onCityChange($event)">\n        <ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item *ngIf="multipleCities">\n      <ion-select placeholder="{{ \'newOrder.area\' | translate }}" [formControl]="loginForm.controls.city_id">\n        <ion-option *ngFor="let areas of this.areas_city" value="{{ areas.name }}">{{ areas.name }}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <button ion-button type="submit" block color="primary" [disabled]="loginForm.invalid">\n      {{ \'newOrder.continue\' | translate }}\n    </button>\n\n  </form>\n\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\new-order\new-order.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],

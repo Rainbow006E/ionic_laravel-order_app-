@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 692:
+/***/ 690:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductsPageModule", function() { return ProductsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__products__ = __webpack_require__(845);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_info__ = __webpack_require__(846);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__products__ = __webpack_require__(843);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_info__ = __webpack_require__(844);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_ecurrency_module__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -47,7 +47,7 @@ var ProductsPageModule = (function () {
 
 /***/ }),
 
-/***/ 845:
+/***/ 843:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,16 +136,16 @@ var ProductsPage = (function () {
             //console.log(this.addonsList2)
             for (var j = 0; j < product.addon_sets.length; j++) {
                 if (product.addon_sets.length !== 0) {
-                    var alert_1 = _this.alertCtrl.create();
-                    alert_1.present();
-                    alert_1.addButton({
+                    var alert = _this.alertCtrl.create();
+                    alert.present();
+                    alert.addButton({
                         text: 'Done',
                     });
-                    alert_1.setTitle('Choose add ons:');
+                    alert.setTitle('Choose add ons:');
                     for (var k = 0; k < _this.addonsList2.length; k++) {
                         if (product.addon_sets[j].id == _this.addonsList2[k].addon_set_id) {
                             console.log("ffs", _this.addonsList2[k].addon_set_id);
-                            alert_1.addInput({
+                            alert.addInput({
                                 type: 'checkbox',
                                 label: _this.addonsList2[k].name,
                                 value: _this.addonsList2[k].name
@@ -162,20 +162,17 @@ var ProductsPage = (function () {
     ProductsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\catalog\products\products.html"*/'<ion-header>\n  <ion-navbar custom-navbar>\n    <ion-title>\n      <span *ngIf="category">{{ category.name }}</span>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="products-content">\n  <ion-searchbar [(ngModel)]="searchQ" [showCancelButton]="true"\n  (ionInput)="onSearchInput($event)">\n  </ion-searchbar>\n\n  <div *ngIf="layout == 2">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-6 *ngFor="let product of products">\n          <div class="product -two-column">\n            <img [src]="product.images[0]" *ngIf="product.images.length == 1">\n            <div padding class="product-info">\n              <product-info [product]="product" [descr]="false"></product-info>\n              <button ion-button block icon-left (click)="addToCart(product)" color="{{ product.added ? \'secondary\' : \'primary\' }}">\n                <ion-icon name=\'cart\'></ion-icon>\n                <span *ngIf="!product.added">{{ \'products.to_cart\' | translate }}</span>\n                <span *ngIf="product.added">{{ \'products.in_cart\' | translate }}</span>\n              </button>\n            </div>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n\n  <div *ngIf="layout == 1">\n    <ion-item text-wrap class="product-2" *ngFor="let product of products">\n      <ion-avatar item-start *ngIf="product.images.length">\n        <img [src]="product.images[0]" alt="">\n      </ion-avatar>\n      <product-info [product]="product" [descr]="false"></product-info>\n      <button item-end ion-button icon-left (click)="addToCart(product)" color="{{ product.added ? \'secondary\' : \'primary\' }}">\n        <ion-icon name=\'cart\'></ion-icon>\n        <span *ngIf="!product.added">{{ \'products.to_cart\' | translate }}</span>\n        <span *ngIf="product.added">{{ \'products.in_cart\' | translate }}</span>\n      </button>\n    </ion-item>\n  </div>\n\n  <div *ngIf="layout == 0">\n    <div class="product" *ngFor="let product of products">\n      <div *ngIf="product.images.length > 0" class="product-images">\n        <img [src]="product.images[0]" *ngIf="product.images.length == 1">\n        <ion-slides pager *ngIf="product.images.length > 1">\n          <ion-slide *ngFor="let image of product.images">\n            <img [src]="image">\n          </ion-slide>\n        </ion-slides>\n      </div>\n      <div padding class="product-info">\n        <product-info [product]="product" [descr]="true"></product-info>\n        <button ion-button block icon-left (click)="addToCart(product)" color="{{ product.added ? \'secondary\' : \'primary\' }}">\n          <ion-icon name=\'cart\'></ion-icon>\n          <span *ngIf="!product.added">{{ \'products.to_cart\' | translate }}</span>\n          <span *ngIf="product.added">{{ \'products.in_cart\' | translate }}</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\catalog\products\products.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__services_cart_service__["a" /* CartService */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* APIService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_cart_service__["a" /* CartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_cart_service__["a" /* CartService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object])
     ], ProductsPage);
     return ProductsPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=products.js.map
 
 /***/ }),
 
-/***/ 846:
+/***/ 844:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

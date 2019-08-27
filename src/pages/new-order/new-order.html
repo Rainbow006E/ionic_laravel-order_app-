@@ -12,39 +12,29 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
 
 
-     <p class="title">Select Location:</p>
-    	<form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">
-	
-			<ion-item *ngIf="multipleCities">
-				<ion-select placeholder="{{ 'newOrder.city' | translate }}" [formControl]="loginForm.controls.city_id">
-					<ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>
-				</ion-select>
-      </ion-item>
-      
-      <ion-item *ngIf="multipleCities">
-          <ion-select placeholder="{{ 'newOrder.area' | translate }}" [formControl]="loginForm.controls.city_id">
-            <ion-option  *ngFor="let areas of this.areasList" value="{{ areas.name }}">{{ areas.name }}</ion-option>
-          </ion-select>
-        </ion-item>
-        
-      <!--   <div class="wrapper1">
-            <p class="title2">Default Adress:</p> 
-          </div>
-            <div class="wrapper2">
-            
-            <ion-input  placeholder="33, street 2 Mankool, Blur Dubai"></ion-input>
-            <ion-input  placeholder="Dubai, United Arab Emirates"></ion-input>
-            </div> -->
-			
-			<button ion-button type="submit" block color="primary" [disabled]="loginForm.invalid">
-				{{ 'newOrder.continue' | translate }}
-			</button>
-		
-		</form>
+  <p class="title">Select Location:</p>
+  <form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">
+
+    <ion-item *ngIf="multipleCities">
+      <ion-select placeholder="{{ 'newOrder.city' | translate }}" [formControl]="loginForm.controls.city_id" (ionChange)="onCityChange($event)">
+        <ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="multipleCities">
+      <ion-select placeholder="{{ 'newOrder.area' | translate }}" [formControl]="loginForm.controls.city_id">
+        <ion-option *ngFor="let areas of this.areas_city" value="{{ areas.name }}">{{ areas.name }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <button ion-button type="submit" block color="primary" [disabled]="loginForm.invalid">
+      {{ 'newOrder.continue' | translate }}
+    </button>
+
+  </form>
 
 </ion-content>

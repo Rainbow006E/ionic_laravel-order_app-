@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 709:
+/***/ 706:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdersHistoryPageModule", function() { return OrdersHistoryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__orders_history__ = __webpack_require__(865);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__orders_history__ = __webpack_require__(862);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_ecurrency_module__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -16649,7 +16649,7 @@ webpackContext.id = 836;
 
 /***/ }),
 
-/***/ 865:
+/***/ 862:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16705,11 +16705,10 @@ var OrdersHistoryPage = (function () {
     OrdersHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\orders_history\orders_history.html"*/'<ion-header>\n    <ion-navbar custom-navbar>\n        <button ion-button menuToggle *ngIf="loggedIn">\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>\n            {{ \'order.history\' | translate }}\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-card *ngFor="let order of orders" (click)="showOrder(order)">\n        <ion-item>\n            <h2 [translate]="\'order.id\'" [translateParams]="{ id: order.id }"></h2>\n            <p>{{ order.address }}</p>\n            <p>{{ stringAsDate(order.created_at) | date: date_format }}</p>\n        </ion-item>\n        <ion-item>\n            <p *ngIf="order.restaurant && multiR">\n                {{ order.restaurant.name }}\n            </p>\n            <p><b>{{ order.total_with_tax | ecurrency }}</b></p>\n        </ion-item>\n    </ion-card>\n</ion-content>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\orders_history\orders_history.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */]) === "function" && _c || Object])
     ], OrdersHistoryPage);
     return OrdersHistoryPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=orders_history.js.map

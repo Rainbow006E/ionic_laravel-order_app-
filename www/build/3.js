@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 697:
+/***/ 696:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailPageModule", function() { return NewsDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news_detail__ = __webpack_require__(851);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news_detail__ = __webpack_require__(850);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16646,7 +16646,7 @@ webpackContext.id = 836;
 
 /***/ }),
 
-/***/ 851:
+/***/ 850:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16696,12 +16696,10 @@ var NewsDetailPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'news-detail',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\news\news_detail\news_detail.html"*/'<ion-header>\n	<ion-navbar>\n		<ion-title>{{ item.title }}</ion-title>\n	</ion-navbar>\n</ion-header>\n<ion-content class="home">\n	<div class="default-list">\n		<div class="list-item -article">\n			<div class="img-wrapper">\n				<img [src]="item.image_url" *ngIf="item.image_url">\n			</div>\n			<div class="item-text-wrapper">\n				<div padding>\n					<h2>{{ item.title }}</h2>\n					<div class="date">{{ stringAsDate(item.created_at) | date: date_format }}</div>\n					<br>\n					<div>{{ item.announce }}</div>\n					<div [innerHTML]="getNewsContent()"></div>\n				</div>\n			</div>\n		</div>\n	</div>\n</ion-content>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\news\news_detail\news_detail.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["DomSanitizer"],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["DomSanitizer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["DomSanitizer"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _d || Object])
     ], NewsDetailPage);
     return NewsDetailPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=news_detail.js.map

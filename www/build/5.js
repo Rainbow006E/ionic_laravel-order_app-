@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 704:
+/***/ 701:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,10 +8,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderPageModule", function() { return OrderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__order__ = __webpack_require__(860);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__order__ = __webpack_require__(856);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_stripe__ = __webpack_require__(841);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_paypal__ = __webpack_require__(842);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_stripe__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_paypal__ = __webpack_require__(841);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_ecurrency_module__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -52,7 +52,7 @@ var OrderPageModule = (function () {
 
 /***/ }),
 
-/***/ 841:
+/***/ 840:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -222,7 +222,7 @@ var Stripe = (function (_super) {
 
 /***/ }),
 
-/***/ 842:
+/***/ 841:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -569,7 +569,7 @@ var PayPalShippingAddress = (function () {
 
 /***/ }),
 
-/***/ 860:
+/***/ 856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -580,8 +580,8 @@ var PayPalShippingAddress = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_stripe__ = __webpack_require__(841);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_paypal__ = __webpack_require__(842);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_stripe__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_paypal__ = __webpack_require__(841);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_util_service__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -632,6 +632,7 @@ var OrderPage = (function () {
         this.cities = [];
         this.add = [];
         this.areasList = [];
+        this.areas_city = [];
         this.getAreas();
         this.active = true;
         var fields = {};
@@ -666,6 +667,7 @@ var OrderPage = (function () {
         });
         this.formReady = true;
         this.discountPrice = null;
+        this.areas_city[0] = { name: 'Please select city.' };
     }
     OrderPage.prototype.getAreas = function () {
         var _this = this;
@@ -673,6 +675,11 @@ var OrderPage = (function () {
             _this.areasList = data;
             console.log('Areas : ', _this.areasList[0].name);
         });
+    };
+    OrderPage.prototype.onCityChange = function (e) {
+        console.log('e: ', e);
+        this.areas_city = this.areasList.filter(function (x) { return x.city_id == e; });
+        console.log('areas_city: ', this.areas_city);
     };
     OrderPage.prototype.showAddressWindow = function () {
         var _this = this;
@@ -855,23 +862,12 @@ var OrderPage = (function () {
         }
     };
     OrderPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\order\order.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'order.title\' | translate }}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <form *ngIf="formReady" [formGroup]="orderForm" (ngSubmit)="placeOrder(orderForm.value)" novalidate>\n    <ion-item>\n      <ion-label fixed>{{ \'order.name\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>{{ \'order.phone\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.phone"></ion-input>\n    </ion-item>\n    <button type="button" ion-item detail-none (click)="showAddressWindow()">\n      <ion-label fixed>{{ \'order.address\' | translate }}</ion-label>\n      <ion-input disabled placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.address"></ion-input>\n    </button>\n    <ion-item>\n      <ion-label fixed>{{ \'order.promo_code\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.optional\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.promo_code"></ion-input>\n      <button ion-button item-right type="button" (click)="validatePromo()">{{ \'order.check_promo\' | translate }}\n      </button>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>{{ \'order.comment\' | translate }}</ion-label>\n      <ion-textarea [formControl]="orderForm.controls.comment"\n                    placeholder="{{ \'order.optional\' | translate }}"></ion-textarea>\n    </ion-item>\n\n    <p class="selectL">Select Location:</p>\n    <form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">\n\n    <ion-item *ngIf="multipleCities">\n      <ion-select placeholder="{{ \'newOrder.city\' | translate }}" [formControl]="loginForm.controls.city_id">\n        <ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n      </ion-select>\n    </ion-item>\n    \n    <ion-item *ngIf="multipleCities">\n        <ion-select placeholder="{{ \'newOrder.area\' | translate }}" [formControl]="loginForm.controls.city_id">\n          <ion-option  *ngFor="let areas of this.areasList" value="{{ areas.name }}">{{ areas.name }}</ion-option>\n        </ion-select>\n      </ion-item>\n  \n  </form>\n    \n    <ion-list radio-group [formControl]="orderForm.controls.payment_method">\n      <ion-item>\n        <ion-label>{{ \'order.cash_on_delivery\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="cash"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>{{ \'order.card_on_delivery\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="card"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>{{ \'order.paypal\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="paypal"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-list *ngIf="userData.loyalty_reward > 0">\n      <ion-item>\n        <ion-label stacked>{{ \'order.use_reward\' | translate:{amount: userData.loyalty_reward | ecurrency} }}</ion-label>\n        <ion-input [formControl]="orderForm.controls.loyalty" type="number" max="userData.loyalty_reward"></ion-input>\n        <button ion-button item-right type="button" (click)="useReward()">{{ \'order.use\' | translate }}</button>\n      </ion-item>\n    </ion-list>\n    <div class="cart-total -nob">\n      <div>{{ \'order.price\' | translate }} {{ cTotalPrice | ecurrency }}</div>\n      <div>{{ \'order.delivery_price\' | translate }} {{ deliveryPrice | ecurrency }}</div>\n      <div>{{ \'order.total\' | translate }} {{ cTotalPrice + deliveryPrice | ecurrency }}</div>\n      <div *ngIf="cLoyaltyUsed > 0">{{ \'order.loyalty_used\' | translate:{amount: cLoyaltyUsed | ecurrency} }}</div>\n      <div *ngIf="discountPrice">{{ \'order.coupon_discount\' | translate }} {{ cFullPrice - discountPrice | ecurrency\n        }}</div>\n      <div *ngIf="discountPrice > 0 || cLoyaltyUsed > 0">Total with discount {{ discountPrice - cLoyaltyUsed + deliveryPrice | ecurrency }}</div>\n      <div *ngIf="cTaxPrice > 0">\n        <div>{{ \'order.tax\' | translate }} {{ cTaxPrice | ecurrency }}</div>\n        <div>{{ \'order.total_with_tax\' | translate }} {{ cPriceWithTax | ecurrency }}</div>\n      </div>\n    </div>\n    <button  (click)="pushPage()" [disabled]="!orderForm.valid" ion-button block class="place-order-button">{{\n      \'order.place_order\' | translate }}\n    </button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\order\order.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\order\order.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ \'order.title\' | translate }}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <form *ngIf="formReady" [formGroup]="orderForm" (ngSubmit)="placeOrder(orderForm.value)" novalidate>\n    <ion-item>\n      <ion-label fixed>{{ \'order.name\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.name"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>{{ \'order.phone\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.phone"></ion-input>\n    </ion-item>\n    <button type="button" ion-item detail-none (click)="showAddressWindow()">\n      <ion-label fixed>{{ \'order.address\' | translate }}</ion-label>\n      <ion-input disabled placeholder="{{ \'order.click_to_write\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.address"></ion-input>\n    </button>\n    <ion-item>\n      <ion-label fixed>{{ \'order.promo_code\' | translate }}</ion-label>\n      <ion-input placeholder="{{ \'order.optional\' | translate }}" type="text"\n                 [formControl]="orderForm.controls.promo_code"></ion-input>\n      <button ion-button item-right type="button" (click)="validatePromo()">{{ \'order.check_promo\' | translate }}\n      </button>\n    </ion-item>\n    <ion-item>\n      <ion-label fixed>{{ \'order.comment\' | translate }}</ion-label>\n      <ion-textarea [formControl]="orderForm.controls.comment"\n                    placeholder="{{ \'order.optional\' | translate }}"></ion-textarea>\n    </ion-item>\n\n    <p class="selectL">Select Location:</p>\n    <form (ngSubmit)=" openOrder()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">\n\n    <ion-item *ngIf="multipleCities">\n      <ion-select placeholder="{{ \'newOrder.city\' | translate }}" [formControl]="loginForm.controls.city_id" (ionChange)="onCityChange($event)">\n        <ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n      </ion-select>\n    </ion-item>\n    \n    <ion-item *ngIf="multipleCities">\n        <ion-select placeholder="{{ \'newOrder.area\' | translate }}" [formControl]="loginForm.controls.city_id">\n          <ion-option  *ngFor="let areas of this.areas_city" value="{{ areas.name }}">{{ areas.name }}</ion-option>\n        </ion-select>\n      </ion-item>\n  \n  </form>\n    \n    <ion-list radio-group [formControl]="orderForm.controls.payment_method">\n      <ion-item>\n        <ion-label>{{ \'order.cash_on_delivery\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="cash"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>{{ \'order.card_on_delivery\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="card"></ion-radio>\n      </ion-item>\n      <ion-item>\n        <ion-label>{{ \'order.paypal\' | translate }}</ion-label>\n        <ion-radio name="payment_method" value="paypal"></ion-radio>\n      </ion-item>\n    </ion-list>\n    <ion-list *ngIf="userData.loyalty_reward > 0">\n      <ion-item>\n        <ion-label stacked>{{ \'order.use_reward\' | translate:{amount: userData.loyalty_reward | ecurrency} }}</ion-label>\n        <ion-input [formControl]="orderForm.controls.loyalty" type="number" max="userData.loyalty_reward"></ion-input>\n        <button ion-button item-right type="button" (click)="useReward()">{{ \'order.use\' | translate }}</button>\n      </ion-item>\n    </ion-list>\n    <div class="cart-total -nob">\n      <div>{{ \'order.price\' | translate }} {{ cTotalPrice | ecurrency }}</div>\n      <div>{{ \'order.delivery_price\' | translate }} {{ deliveryPrice | ecurrency }}</div>\n      <div>{{ \'order.total\' | translate }} {{ cTotalPrice + deliveryPrice | ecurrency }}</div>\n      <div *ngIf="cLoyaltyUsed > 0">{{ \'order.loyalty_used\' | translate:{amount: cLoyaltyUsed | ecurrency} }}</div>\n      <div *ngIf="discountPrice">{{ \'order.coupon_discount\' | translate }} {{ cFullPrice - discountPrice | ecurrency\n        }}</div>\n      <div *ngIf="discountPrice > 0 || cLoyaltyUsed > 0">Total with discount {{ discountPrice - cLoyaltyUsed + deliveryPrice | ecurrency }}</div>\n      <div *ngIf="cTaxPrice > 0">\n        <div>{{ \'order.tax\' | translate }} {{ cTaxPrice | ecurrency }}</div>\n        <div>{{ \'order.total_with_tax\' | translate }} {{ cPriceWithTax | ecurrency }}</div>\n      </div>\n    </div>\n    <button  (click)="pushPage()" [disabled]="!orderForm.valid" ion-button block class="place-order-button">{{\n      \'order.place_order\' | translate }}\n    </button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\order\order.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */],
-            __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["g" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_native_stripe__["a" /* Stripe */],
-            __WEBPACK_IMPORTED_MODULE_7__ionic_native_paypal__["a" /* PayPal */],
-            __WEBPACK_IMPORTED_MODULE_9__services_util_service__["a" /* UtilService */],
-            __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_cart_service__["a" /* CartService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* ViewController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["g" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["f" /* LoadingController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_order_history_service__["a" /* OrderHistoryService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_stripe__["a" /* Stripe */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_stripe__["a" /* Stripe */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_paypal__["a" /* PayPal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_paypal__["a" /* PayPal */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_9__services_util_service__["a" /* UtilService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__services_util_service__["a" /* UtilService */]) === "function" && _l || Object, typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */]) === "function" && _m || Object, typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* NavController */]) === "function" && _o || Object])
     ], OrderPage);
     return OrderPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
 }());
 
 //# sourceMappingURL=order.js.map

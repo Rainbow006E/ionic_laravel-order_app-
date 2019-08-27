@@ -16706,10 +16706,10 @@ var NewsFeedPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'news-feed',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\news\news_feed\news_feed.html"*/'<ion-header>\n	<ion-navbar>\n		<button ion-button menuToggle *ngIf="loggedIn">\n			<ion-icon name="menu"></ion-icon>\n		</button>\n		<ion-title>{{ \'news.title\' | translate }}</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-card *ngFor="let item of items" tappable (click)="showDetails(item)" >\n		<ion-item text-wrap>\n			<ion-avatar item-left>\n				<img [src]="item.image_url" *ngIf="item.image_url">\n			</ion-avatar>\n			<h2>{{ item.title }}</h2>\n			<p>\n				<small>{{ stringAsDate(item.created_at) | date: date_format }}</small>\n			</p>\n			<p>{{ item.announce }}</p>\n		</ion-item>\n	</ion-card>\n</ion-content>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\news\news_feed\news_feed.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _b || Object])
     ], NewsFeedPage);
     return NewsFeedPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=news_feed.js.map

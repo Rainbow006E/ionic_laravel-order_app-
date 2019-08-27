@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 711:
+/***/ 709:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(867);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signup__ = __webpack_require__(865);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var SignupPageModule = (function () {
 
 /***/ }),
 
-/***/ 867:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,15 +127,10 @@ var SignupPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-signup',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\signup\signup.html"*/'<ion-content class="signup-page">\n	<div padding class="wrap">\n    <div class="icon">\n      <img src="assets/icon.png" alt="">\n    </div>\n		<form (ngSubmit)="doSignup()" *ngIf="active" novalidate [formGroup]="loginForm" class="signup-form">\n			<ion-item>\n				<ion-input placeholder="{{ \'signup.name\' | translate }}" type="text" [formControl]="loginForm.controls.name">\n				</ion-input>\n			</ion-item>\n			<ion-item>\n				<ion-input placeholder="{{ \'signup.phone\' | translate }}" type="text" [formControl]="loginForm.controls.phone">\n				</ion-input>\n			</ion-item>\n			<ion-item>\n				<ion-input placeholder="{{ \'signup.email\' | translate }}" type="text" [formControl]="loginForm.controls.email">\n				</ion-input>\n			</ion-item>\n			<ion-item *ngIf="multipleCities">\n				<ion-select placeholder="{{ \'signup.city\' | translate }}" [formControl]="loginForm.controls.city_id">\n					<ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n				</ion-select>\n			</ion-item>\n			<ion-item class="iconed-input">\n				<ion-input placeholder="{{ \'signup.password\' | translate }}" type="password" [formControl]="loginForm.controls.password">\n				</ion-input>\n			</ion-item>\n			<button ion-button type="submit" block color="primary" [disabled]="loginForm.invalid">\n				{{ \'signup.button\' | translate }}\n			</button>\n			<div class="login-links">\n				<a (click)="login()">{{ \'signup.login\' | translate }}</a>\n			</div>\n		</form>\n	</div>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\signup\signup.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */],
-            __WEBPACK_IMPORTED_MODULE_6__services_push_service__["a" /* PushService */],
-            __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__services_push_service__["a" /* PushService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_push_service__["a" /* PushService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */]) === "function" && _g || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=signup.js.map

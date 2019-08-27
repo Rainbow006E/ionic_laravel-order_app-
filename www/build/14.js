@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 701:
+/***/ 702:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreditCardInputModule", function() { return CreditCardInputModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credit_card_input__ = __webpack_require__(856);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credit_card_input__ = __webpack_require__(857);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var CreditCardInputModule = (function () {
 
 /***/ }),
 
-/***/ 856:
+/***/ 857:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90,10 +90,10 @@ var CreditCardInput = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'credit-card-input',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\credit_card_input\credit_card_input.html"*/'<ion-content>\n<div padding>\n	<br>\n	<br>\n	<form [formGroup]="cardForm" (ngSubmit)="pay()" novalidate>\n		<ion-item>\n            <ion-label fixed>{{ \'credit_card.number\' | translate }}</ion-label>\n            <ion-input type="number" pattern="[0-9]*" [formControl]="cardForm.controls.number"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label fixed>{{ \'credit_card.exp_month\' | translate }}</ion-label>\n            <ion-input type="number" pattern="[0-9]*" [formControl]="cardForm.controls.expMonth"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label fixed>{{ \'credit_card.exp_year\' | translate }}</ion-label>\n            <ion-input type="number" pattern="[0-9]*" [formControl]="cardForm.controls.expYear"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label fixed>{{ \'credit_card.cvc\' | translate }}</ion-label>\n            <ion-input type="number" pattern="[0-9]*" [formControl]="cardForm.controls.cvc"></ion-input>\n        </ion-item>\n        <button type="submit" ion-button block primary>{{ \'credit_card.pay\' | translate }}</button>\n        <button (click)="closeModal()" type="button" ion-button block>{{ \'credit_card.cancel\' | translate }}</button>\n	</form>\n</div>\n</ion-content>'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\credit_card_input\credit_card_input.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object])
     ], CreditCardInput);
     return CreditCardInput;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=credit_card_input.js.map

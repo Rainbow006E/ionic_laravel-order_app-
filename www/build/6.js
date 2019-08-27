@@ -249,18 +249,15 @@ var AddressMap = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('map'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], AddressMap.prototype, "mapElement", void 0);
     AddressMap = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\address_map\address_map.html"*/'<div class="map-holder">\n    <div #map class="address-map">\n    </div>\n    <div class="address-input-holder">\n        <ion-item tappable (click)="showAddressCompletionWindow()">\n            <ion-input disabled [(ngModel)]="address"></ion-input>\n        </ion-item>\n    </div>\n    <div class="address-input-buttons">\n        <ion-grid>\n            <ion-row>\n                <ion-col>\n                    <button ion-button block outline class="address-input-cancel" (click)="closeModal()">{{ \'map.cancel\' | translate }}</button>\n                </ion-col>\n                <ion-col>\n                    <button ion-button block (click)="setAddress()">{{ \'map.select\' | translate }}</button>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </div>\n</div>\n<div class="map-autocomplete-holder" [ngClass]="{ \'-visible\': !mapMode }">\n    <ion-header>\n        <ion-toolbar class="address-toolbar">\n            <ion-title>&nbsp;</ion-title>\n            <ion-searchbar [(ngModel)]="autocomplete.query" [showCancelButton]="true" (ionInput)="updateSearch()" (ionCancel)="closeModal()"></ion-searchbar>\n        </ion-toolbar>\n    </ion-header>\n    <ion-content>\n        <ion-list class="address-variants">\n            <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">\n                {{ item }}\n            </ion-item>\n        </ion-list>\n    </ion-content>\n</div>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\address_map\address_map.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"],
-            __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */],
-            __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* APIService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_util_service__["a" /* UtilService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__["c" /* TranslateService */]) === "function" && _f || Object])
     ], AddressMap);
     return AddressMap;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=address_map.js.map
@@ -339,10 +336,10 @@ var AddressCompletion = (function () {
     AddressCompletion = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\address_completion\address_completion.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-title></ion-title>\n    <ion-searchbar [(ngModel)]="autocomplete.query" [showCancelButton]="true" (ionInput)="updateSearch()"\n                   (ionCancel)="closeModal()"></ion-searchbar>\n  </ion-toolbar>\n</ion-header>\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\ordering\address_completion\address_completion.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _b || Object])
     ], AddressCompletion);
     return AddressCompletion;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=address_completion.js.map

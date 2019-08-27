@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 708:
+/***/ 707:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(864);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(863);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var ProfilePageModule = (function () {
 
 /***/ }),
 
-/***/ 864:
+/***/ 863:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119,13 +119,10 @@ var ProfilePage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'profile',template:/*ion-inline-start:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\profile\profile.html"*/'<ion-header>\n	<ion-navbar>\n		<ion-title>{{ \'profile.title\' | translate }}</ion-title>\n		<ion-buttons end>\n			<button ion-button block (click)="save()">\n				{{ \'profile.save\' | translate }}\n			</button>\n		</ion-buttons>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<form (ngSubmit)="save()" *ngIf="active" novalidate [formGroup]="profileForm" class="signup-form">\n		<ion-item>\n			<ion-label stacked>{{ \'profile.email\' | translate }}</ion-label>\n			<ion-input type="text" [formControl]="profileForm.controls.email">\n			</ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label stacked>{{ \'profile.name\' | translate }}</ion-label>\n			<ion-input type="text" [formControl]="profileForm.controls.name">\n			</ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label stacked>{{ \'profile.phone\' | translate }}</ion-label>\n			<ion-input type="text" [formControl]="profileForm.controls.phone">\n			</ion-input>\n		</ion-item>\n		<ion-item *ngIf="showCities">\n			<ion-label stacked>{{ \'profile.city\' | translate }}</ion-label>\n			<ion-select placeholder="{{ \'signup.city\' | translate }}" [formControl]="profileForm.controls.city_id">\n				<ion-option *ngFor="let city of cities" value="{{ city.id }}">{{ city.name }}</ion-option>\n			</ion-select>\n		</ion-item>\n		<ion-item>\n			<ion-label stacked>{{ \'profile.password\' | translate }}</ion-label>\n			<ion-input type="password" [formControl]="profileForm.controls.password">\n			</ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label stacked>{{ \'profile.password_confirmation\' | translate }}</ion-label>\n			<ion-input type="password" [formControl]="profileForm.controls.password_confirmation">\n			</ion-input>\n		</ion-item>\n	</form>\n</ion-content>\n'/*ion-inline-end:"F:\ionic\ionic_laravel\Jollibee-App\src\pages\personal\profile\profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* APIService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_util_service__["a" /* UtilService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* APIService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* APIService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_util_service__["a" /* UtilService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_util_service__["a" /* UtilService */]) === "function" && _e || Object])
     ], ProfilePage);
     return ProfilePage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=profile.js.map
